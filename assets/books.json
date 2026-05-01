@@ -1,0 +1,36 @@
+[
+  {
+     
+    "title": "Waaqayyo si jaalata",
+
+      "laws":"Seera tokkoffaa" , 
+    "verse": "Yoh 3:16",
+    "description": "For God so loved the world that he gave his one and only Son, that whoever believes in him shall not perish but have eternal life.",
+    "image": "assets/images/law1.png",
+    "topic": "God's Love"
+  },
+  {
+    "title": "Namni Cubbamaadha",
+    "laws":"Seera lammaffaa" ,
+    "verse": "Roomaa 3:23",
+    "description": "For all have sinned and fall short of the glory of God.",
+    "image": "assets/images/law2.png",
+    "topic": "Human Condition"
+  },
+  {
+    "title": "Yesuus Kiristoos,Karaa Fayyinaati.",
+    "laws":"Seera sadaffaa" ,
+    "verse": "Roomaa 6:23",
+    "description": "For the wages of sin is death, but the gift of God is eternal life in Christ Jesus our Lord.",
+    "image": "assets/images/law3.png",
+    "topic": "God's Solution"
+  },
+  {
+    "title": "Kiristoos fudhu",
+    "laws":"Seera afuraffaa" ,
+    "verse": "Yohn 1:12",
+    "description": "Yet to all who did receive him, to those who believed in his name, he gave the right to become children of God.",
+    "image": "assets/images/law4.png",
+    "topic": "Your Response"
+  }
+]
