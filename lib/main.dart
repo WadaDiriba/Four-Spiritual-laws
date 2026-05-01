@@ -14,7 +14,7 @@ class FourLawsApp extends StatelessWidget {
     return ChangeNotifierProvider(
       create: (context) => BookProvider(),
       child: MaterialApp(
-        title: 'Seerota Afuuraa Arfan',
+        title: 'Seerota Hafuuraa Arfan',
         theme: ThemeData(),
         debugShowCheckedModeBanner: false,
         home: ContentScreen(),
