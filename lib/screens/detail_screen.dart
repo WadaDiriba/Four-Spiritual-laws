@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:fourspirtuallaws/constants/app_color.dart';
-import 'package:fourspirtuallaws/widgets/app_bar.dart';
-import 'package:fourspirtuallaws/book_model.dart';
+import 'package:four_laws/book_model.dart';
+import 'package:four_laws/constants/app_color.dart';
+import 'package:four_laws/widgets/app_bar.dart';
 
 class DetailScreen extends StatelessWidget {
   final Book book;
@@ -20,12 +20,24 @@ class DetailScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              book.laws,
-              style: TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
-                color: AppColor.description,
+            Container(
+              height: 200,
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage(book.image),
+                  fit: BoxFit.cover,
+                ),
+              ),
+              color: AppColor.bgoverlay.withValues(alpha: 0.2),
+              child: Center(
+                child: Text(
+                  book.laws,
+                  style: TextStyle(
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold,
+                    color: AppColor.description,
+                  ),
+                ),
               ),
             ),
             SizedBox(height: 16),

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:fourspirtuallaws/constants/app_color.dart';
+import 'package:four_laws/constants/app_color.dart';
 
 class CustomAppBar extends StatelessWidget {
   const CustomAppBar({super.key});
@@ -13,7 +13,7 @@ class CustomAppBar extends StatelessWidget {
         statusBarIconBrightness: Brightness.dark,
       ),
       title: Text(
-        'Four Spiritual Laws',
+        'Seerota Afuura Arfan',
         style: TextStyle(
           color: AppColor.light,
           fontSize: 24,

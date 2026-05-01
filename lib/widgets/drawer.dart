@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fourspirtuallaws/constants/app_color.dart';
+import 'package:four_laws/constants/app_color.dart';
 
 class CustomDrawer extends StatelessWidget {
   const CustomDrawer({super.key});
@@ -14,7 +14,7 @@ class CustomDrawer extends StatelessWidget {
               DrawerHeader(
                 decoration: BoxDecoration(color: AppColor.bgoverlay),
                 child: Text(
-                  "Four Spiritual Laws",
+                  "Seerota Afuura Arfan",
                   style: TextStyle(
                     color: AppColor.light,
                     fontFamily: 'Poppins',

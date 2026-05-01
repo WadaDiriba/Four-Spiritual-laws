@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:fourspirtuallaws/book_provider.dart';
-import 'package:fourspirtuallaws/widgets/app_bar.dart';
-import 'package:fourspirtuallaws/screens/detail_screen.dart';
+import 'package:four_laws/book_provider.dart';
+import 'package:four_laws/widgets/app_bar.dart';
+import 'package:four_laws/screens/detail_screen.dart';
 
 class ContentScreen extends StatelessWidget {
   const ContentScreen({super.key});
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
