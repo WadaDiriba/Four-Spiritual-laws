@@ -1,32 +1,27 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:four_laws/constants/app_color.dart';
 
-class CustomAppBar extends StatelessWidget {
+class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   const CustomAppBar({super.key});
+
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      backgroundColor: AppColor.bgoverlay,
-      systemOverlayStyle: SystemUiOverlayStyle(
-        statusBarColor: AppColor.light,
-        statusBarIconBrightness: Brightness.dark,
-      ),
       title: Text(
-        'Seerota Afuura Arfan',
+        'Seerota Hafuuraa arfan',
         style: TextStyle(
           color: AppColor.light,
-          fontSize: 24,
+          fontFamily: 'Poppins',
+          fontSize: 20,
           fontWeight: FontWeight.bold,
-          fontFamily: 'regular',
         ),
       ),
-      leading: IconButton(
-        icon: Icon(Icons.menu),
-        onPressed: () {
-          Scaffold.of(context).openDrawer();
-        },
-      ),
+      backgroundColor: AppColor.bgoverlay,
+      elevation: 2,
+      iconTheme: IconThemeData(color: AppColor.light),
     );
   }
+
+  @override
+  Size get preferredSize => const Size.fromHeight(kToolbarHeight);
 }

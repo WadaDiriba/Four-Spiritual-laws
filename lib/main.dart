@@ -1,21 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:fourspirtuallaws/book_provider.dart';
-import 'package:fourspirtuallaws/screens/content_screen.dart';
+import 'package:four_laws/book_provider.dart';
+import 'package:four_laws/screens/content_screen.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const FourLawsApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
+class FourLawsApp extends StatelessWidget {
+  const FourLawsApp({super.key});
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
       create: (context) => BookProvider(),
       child: MaterialApp(
-        title: 'Four Spiritual Laws',
+        title: 'Seerota Afuuraa Arfan',
         theme: ThemeData(),
         debugShowCheckedModeBanner: false,
         home: ContentScreen(),

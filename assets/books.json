@@ -1,12 +1,12 @@
 [
   {
-     
+
     "title": "Waaqayyo si jaalata",
 
-      "laws":"Seera tokkoffaa" , 
-    "verse": "Yoh 3:16",
+      "laws":"Seera tokkoffaa" ,
+    "verse": "[Waaqayyo, akkasitti tokkicha ilma isaa hamma kennuufitti biyya lafaa jaallate; kun immoo isatti kan amanu hundinuu jireenya bara baraa haa qabaatuuf malee, haa baduuf miti] Yohannis 3:16",
     "description": "For God so loved the world that he gave his one and only Son, that whoever believes in him shall not perish but have eternal life.",
-    "image": "assets/images/law1.png",
+    "image": "assets/images/laws1.png",
     "topic": "God's Love"
   },
   {
@@ -14,7 +14,7 @@
     "laws":"Seera lammaffaa" ,
     "verse": "Roomaa 3:23",
     "description": "For all have sinned and fall short of the glory of God.",
-    "image": "assets/images/law2.png",
+    "image": "assets/images/laws2.png",
     "topic": "Human Condition"
   },
   {
@@ -22,7 +22,7 @@
     "laws":"Seera sadaffaa" ,
     "verse": "Roomaa 6:23",
     "description": "For the wages of sin is death, but the gift of God is eternal life in Christ Jesus our Lord.",
-    "image": "assets/images/law3.png",
+    "image": "assets/images/laws3.png",
     "topic": "God's Solution"
   },
   {
@@ -30,7 +30,7 @@
     "laws":"Seera afuraffaa" ,
     "verse": "Yohn 1:12",
     "description": "Yet to all who did receive him, to those who believed in his name, he gave the right to become children of God.",
-    "image": "assets/images/law4.png",
+    "image": "assets/images/laws4.png",
     "topic": "Your Response"
   }
 ]
