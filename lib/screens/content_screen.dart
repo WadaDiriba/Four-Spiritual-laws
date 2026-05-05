@@ -4,7 +4,6 @@ import 'package:four_laws/book_provider.dart';
 import 'package:four_laws/widgets/app_bar.dart';
 import 'package:four_laws/widgets/drawer.dart';
 import 'package:four_laws/screens/detail_screen.dart';
-import 'package:four_laws/constants/app_color.dart';
 
 class ContentScreen extends StatefulWidget {
   const ContentScreen({super.key});
@@ -19,57 +18,8 @@ class _ContentScreenState extends State<ContentScreen> {
     super.initState();
     // Show welcome dialog after widget is built
     WidgetsBinding.instance.addPostFrameCallback((_) {
-      _showWelcomeDialog();
+      ;
     });
-  }
-
-  void _showWelcomeDialog() {
-    showDialog(
-      context: context,
-      barrierDismissible: false,
-      builder: (context) => AlertDialog(
-        backgroundColor: AppColor.light,
-        title: Text(
-          "Akka Fayyadamu",
-          style: TextStyle(
-            fontWeight: FontWeight.bold,
-            color: AppColor.bgoverlay,
-          ),
-        ),
-        content: SingleChildScrollView(
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                "Kun app Seerota Hafuuraa Arfaniif dha:\n\n",
-                style: TextStyle(fontWeight: FontWeight.w600),
-              ),
-              Text(
-                "1. ☰ Menu aggaa cuqaasi\n2. 📚 Seera filadhu kaasuu\n3. 📖 Qulqullina dubbisuu\n4. 🔙 Duubatti deebi'uuf back button fayyadami\n\n",
-              ),
-              Text(
-                "Seerota Hafuuraa Arfan:\n• Waaqayyo si jaalata\n• Namni Cubbamaadha\n• Yesuus Kiristoos, Karaa Fayyinaati\n• Kiristoos fudhu",
-                style: TextStyle(fontStyle: FontStyle.italic),
-              ),
-            ],
-          ),
-        ),
-        actions: [
-          TextButton(
-            onPressed: () => Navigator.pop(context),
-            child: Text(
-              "Fayyadama",
-              style: TextStyle(
-                fontSize: 18,
-                color: AppColor.bgoverlay,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-          ),
-        ],
-      ),
-    );
   }
 
   @override
@@ -82,9 +32,6 @@ class _ContentScreenState extends State<ContentScreen> {
       drawer: CustomDrawer(),
       body: Consumer<BookProvider>(
         builder: (context, bookProvider, child) {
-          if (bookProvider.books.isEmpty) {
-            return Center(child: CircularProgressIndicator());
-          }
           return ListView.builder(
             itemCount: bookProvider.books.length,
             itemBuilder: (context, index) {

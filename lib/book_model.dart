@@ -8,7 +8,7 @@ class Book {
   final String topic;
   final String laws;
   final String addverses;
-
+  final String prayer;
   Book({
     required this.title,
     required this.verse,
@@ -16,12 +16,13 @@ class Book {
     required this.addverses,
     required this.image,
     required this.topic,
+    required this.prayer,
     required this.laws,
   });
-
   factory Book.fromJson(Map<String, dynamic> json) {
     return Book(
       title: json['title'],
+      prayer: json['prayer'],
       verse: json['verse'],
       description: json['description'],
       addverses: json['addverses'],

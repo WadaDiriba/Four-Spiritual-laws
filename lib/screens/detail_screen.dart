@@ -16,6 +16,13 @@ class DetailScreen extends StatefulWidget {
 
 class _DetailScreenState extends State<DetailScreen> {
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
+  final TextEditingController _dropdownController = TextEditingController();
+
+  @override
+  void dispose() {
+    _dropdownController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -45,20 +52,24 @@ class _DetailScreenState extends State<DetailScreen> {
           },
         ),
         actions: [
-          DropdownMenu<String>(
-            controller: TextEditingController(),
-            hintText: 'Select a law',
-            dropdownMenuEntries: const [
-              DropdownMenuEntry(value: 'Seera tokkoffaa', label: 'Law 1'),
-              DropdownMenuEntry(value: 'Seera lammaffaa', label: 'Law 2'),
-              DropdownMenuEntry(value: 'Seera sadaffaa', label: 'Law 3'),
-              DropdownMenuEntry(value: 'Seera afuraffaa', label: 'Law 4'),
-            ],
-            onSelected: (value) {
-              if (value != null) {
-                // Navigate to the selected law
-                _navigateToLaw(context, value);
-              }
+          Consumer<BookProvider>(
+            builder: (context, bookProvider, child) {
+              return DropdownMenu<String>(
+                controller: _dropdownController,
+                hintText: 'Seera filadhu',
+                width: 120,
+                dropdownMenuEntries: bookProvider.books.map((book) {
+                  return DropdownMenuEntry(
+                    value: book.laws,
+                    label: '${book.laws.split(' ').last}',
+                  );
+                }).toList(),
+                onSelected: (value) {
+                  if (value != null && value != widget.book.laws) {
+                    _navigateToLaw(context, value);
+                  }
+                },
+              );
             },
           ),
         ],
@@ -144,14 +155,27 @@ class _DetailScreenState extends State<DetailScreen> {
 
             if (widget.book.addverses.isNotEmpty) ...[
               SizedBox(height: 16),
+
               Text(
                 'Dubbisa Dabalataa: ${widget.book.addverses}',
                 style: TextStyle(
-                  fontSize: 14,
-                  color: Colors.grey,
-                  fontStyle: FontStyle.italic,
+                  fontSize: 16,
+                  color: AppColor.description,
+                  fontStyle: FontStyle.normal,
                 ),
               ),
+
+              // Show prayer only for the fourth law
+              if (widget.book.laws == "Seera Afuraffaa") ...[
+                Text(
+                  "Kadhannaa dhumaa:${widget.book.prayer}",
+                  style: TextStyle(
+                    fontSize: 16,
+                    color: AppColor.verse,
+                    fontStyle: FontStyle.normal,
+                  ),
+                ),
+              ],
             ],
           ],
         ),
