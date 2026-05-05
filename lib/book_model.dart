@@ -7,11 +7,13 @@ class Book {
   final String image;
   final String topic;
   final String laws;
+  final String addverses;
 
   Book({
     required this.title,
     required this.verse,
     required this.description,
+    required this.addverses,
     required this.image,
     required this.topic,
     required this.laws,
@@ -22,6 +24,7 @@ class Book {
       title: json['title'],
       verse: json['verse'],
       description: json['description'],
+      addverses: json['addverses'],
       image: json['image'],
       topic: json['topic'],
       laws: json['laws'],

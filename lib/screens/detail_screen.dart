@@ -141,6 +141,18 @@ class _DetailScreenState extends State<DetailScreen> {
                 fontStyle: FontStyle.italic,
               ),
             ),
+
+            if (widget.book.addverses.isNotEmpty) ...[
+              SizedBox(height: 16),
+              Text(
+                'Dubbisa Dabalataa: ${widget.book.addverses}',
+                style: TextStyle(
+                  fontSize: 14,
+                  color: Colors.grey,
+                  fontStyle: FontStyle.italic,
+                ),
+              ),
+            ],
           ],
         ),
       ),
